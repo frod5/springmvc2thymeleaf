@@ -101,6 +101,12 @@ public class BasicController {
         return "basic/condition";
     }
 
+    @GetMapping("/block")
+    public String block(Model model) {
+        addUsers(model);
+        return "basic/block";
+    }
+
     @GetMapping("/comments")
     public String comment (Model model) {
         model.addAttribute("data","Spring!");
